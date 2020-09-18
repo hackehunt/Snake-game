@@ -156,9 +156,15 @@ def gameloop():
 
             if snake_x > screen_width:
                 snake_x = 0
+                
+            if snake_x < 0:
+                snake_x = screen_width
 
             if snake_y > screen_height:
                 snake_y = 0
+                
+            if snake_y < 0:
+                snake_y = screen_height
 
             plot_snake(gameWindow, blue, snk_list, snake_size)
         pygame.display.update()
